@@ -1,7 +1,9 @@
 ---
+  - hosts: all
+  
   - name: Get the host details using shell and use register module
     shell: '{{cmd}}'
     register: var_uname
 
   - name: Print var_uname using dbug
-    debug: msg="Here is the o/p of {{cmd}}: {{var_uname}}"
+    debug: msg="Here is the o/p of '{{cmd}}': '{{var_uname}}'"
